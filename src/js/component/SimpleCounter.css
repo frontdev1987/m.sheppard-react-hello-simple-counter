@@ -1,0 +1,21 @@
+.bigCounter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seconds {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    font-size: 2rem; /* Adjust this value based on how large you want the numbers */
+    border-radius: 5px; /* Optional: To add rounded corners to the boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* You can adjust this width for a bigger or smaller box */
+    height: 80px; /* Adjust height based on your preference */
+    text-align: center;
+  }
+  

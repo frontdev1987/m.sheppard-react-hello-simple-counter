@@ -1,23 +1,16 @@
 //import react into the bundle
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 
 // include your styles into the webpack bundle
-import "../styles/index.css";
+import "../styles/simplecounter.css";
 
-function SimpleCounter(props) {
-  return (
-    <div className="bigCounter">
-      <div className="calander">
-        <i class="fa-regular fa-clock"></i>
-      </div>
-      <div className="four"></div>
-      <div className="three"></div>
-      <div className="second"></div>
-      <div className="one"></div>
-    </div>
-  );
-}
+import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.createRoot(document.getElementById("app")).render(<SimpleCounter />);
+// ReactDOM.createRoot(document.getElementById("app")).render(<Home />)
+let counter = 0;
+setInterval(function () {
+  ReactDOM.render(<Home counter={counter} />, document.querySelector("#app"));
+  ++counter;
+}, 1000);
